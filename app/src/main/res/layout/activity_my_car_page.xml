@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    tools:context=".my_car_page">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="55dp">
+
+            <nl.joery.animatedbottombar.AnimatedBottomBar
+                android:id="@+id/animatedTopBar"
+                android:layout_width="345dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/top_app_bar_style"
+                app:abb_animationDuration="18"
+                app:abb_iconSize="30dp"
+                app:abb_indicatorAnimation="fade"
+                app:abb_indicatorAppearance="round"
+                app:abb_indicatorColor="@color/Background"
+                app:abb_indicatorHeight="4dp"
+                app:abb_indicatorLocation="bottom"
+                app:abb_indicatorMargin="25dp"
+                app:abb_selectedIndex="1"
+                app:abb_selectedTabType="text"
+                app:abb_tabAnimation="slide"
+                app:abb_tabColor="@color/Background"
+                app:abb_tabColorSelected="@color/Background"
+                app:abb_tabs="@menu/top_app_bar_menu"
+                app:abb_textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv3"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/animatedTopBar" />
+
+            <ImageView
+                android:id="@+id/nothing_pic2"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/nothing_pic"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/animatedTopBar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <nl.joery.animatedbottombar.AnimatedBottomBar
+        android:id="@+id/animatedBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/Background"
+        android:elevation="10dp"
+        app:abb_animationDuration="18"
+        app:abb_iconSize="35dp"
+        app:abb_indicatorAnimation="fade"
+        app:abb_indicatorAppearance="round"
+        app:abb_indicatorColor="@color/PrimaryColor"
+        app:abb_indicatorHeight="4dp"
+        app:abb_indicatorMargin="16dp"
+        app:abb_selectedIndex="2"
+        app:abb_selectedTabType="text"
+        app:abb_tabAnimation="slide"
+        app:abb_tabColor="@color/PrimaryColor"
+        app:abb_tabColorSelected="@color/PrimaryColor"
+        app:abb_tabs="@menu/navbar_tabs"
+        app:abb_textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

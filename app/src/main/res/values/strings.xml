@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Wheel Deal</string>
+    <string name="time_left">Days Left:</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_add">Add Auction</string>
+    <string name="tab_myAuction">My Auctions</string>
+    <string name="ET_Notes">(Notes)</string>
+    <string name="SP_Time">Select Time</string>
+    <string name="tv_AuctionTime">Auction Time</string>
+    <string name="ET_Price">Price</string>
+    <string name="ET_CurrentPrice">Current Price</string>
+    <string name="ET_Phone">Phone Number</string>
+    <string name="ET_Model">Model</string>
+    <string name="ET_Type">Type</string>
+    <string name="ET_Brand">Brand</string>
+    <string name="ET_CarNumber">Car Number</string>
+    <string name="BTN_Save">Save</string>
+    <string name="BTN_Bid">Bid Now</string>
+    <string name="IMG_AddPic">Add pic</string>
+    <string name="ET_City">City</string>
+    <string name="Tv_split">:</string>
+    <string name="HardCore">NestedScroll</string>
+    <string name="tv_Days">Days</string>
+    <string-array name="city">
+        <item>Amman </item>
+        <item>Irbid </item>
+        <item>Al-Balqa </item>
+        <item>Zarqa </item>
+        <item>Mafraq </item>
+        <item>Karak </item>
+        <item>Ma\'an </item>
+        <item>Tafilah </item>
+        <item>Ajloun </item>
+        <item>Jerash </item>
+        <item>Ma\'daba </item>
+        <item>Aqaba </item>
+    </string-array>
+</resources>

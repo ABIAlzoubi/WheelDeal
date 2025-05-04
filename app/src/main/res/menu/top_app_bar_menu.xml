@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/tab_My_Bids"
+            android:icon="@mipmap/tab_auction"
+            android:title="My Bids"
+            />
+        <item
+            android:id="@+id/tab_My_Car"
+            android:icon="@mipmap/tab_mycar"
+            android:title="My Car"
+
+            />
+        <item
+            android:id="@+id/tab_notifi"
+            android:icon="@mipmap/tab_notifi"
+            android:title="Messages" />
+
+    </menu>

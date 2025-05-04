@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+
+
+    <!--  corner Radius  -->
+    <!-- android:radius="25dip"  use this one to make all the corners together -->
+    <corners
+        android:bottomRightRadius="50dp"
+        android:bottomLeftRadius="50dp"
+        android:topLeftRadius="50dp"
+        android:topRightRadius="50dp"/>
+
+    <!-- Background color -->
+    <solid android:color="@color/PrimaryColor"> </solid>
+
+
+    <!-- border -->
+
+</shape>

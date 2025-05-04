@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/car1"
+
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="343dp"
+        android:layout_height="168dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo_img"
+        app:layout_constraintBottom_toTopOf="@+id/edName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765" />
+
+    <EditText
+        android:id="@+id/edName"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/edet_text_style"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:textColor="@color/PrimaryColor"
+        android:textColorHint="@color/PrimaryColor"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/GoogleContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/GoogleContainer"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:minEms="2"
+        android:textColorHint="@color/PrimaryColor"
+        app:counterEnabled="true"
+        app:counterMaxLength="8"
+        app:counterOverflowTextColor="@color/PrimaryColor"
+        app:counterTextColor="@color/Error"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/btnSign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/PrimaryColor">
+
+
+        <EditText
+            android:id="@+id/edPassword"
+            android:layout_width="312dp"
+            android:layout_height="48dp"
+            android:background="@drawable/edet_text_style"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingTop="10dp"
+            android:textColor="@color/PrimaryColor"
+            android:textColorHint="@color/PrimaryColor"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            tools:layout_editor_absoluteX="107dp"
+            tools:layout_editor_absoluteY="340dp" />
+
+        <TextView
+            android:id="@+id/passError"
+            android:layout_width="238dp"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:paddingStart="7dp"
+            android:text="Use at least one special character"
+            android:textColor="@color/Error"
+            android:textStyle="italic"
+            android:visibility="gone" />
+        <!-->android:visibility="gone"<-->
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- -->
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSign"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="108dp"
+        android:background="@drawable/button_style"
+        android:clickable="true"
+        android:hint="Sing in"
+        android:outlineSpotShadowColor="@color/Error"
+        android:shadowColor="@color/Error"
+        android:textColorHint="@color/black"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/tvAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:text="Don't hava an account? "
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+    <TextView
+        android:id="@+id/tvlink"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:text="Create Now"
+        android:textColor="@color/PrimaryColor"
+        android:textSize="15sp"
+        android:textStyle="italic"
+
+        app:layout_constraintStart_toEndOf="@+id/tvAccount"
+        app:layout_constraintTop_toTopOf="@+id/tvAccount" />
+
+    <TextView
+        android:id="@+id/tvNameEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="7dp"
+        android:text="Pleas Enter Your E-mail"
+        android:textColor="@color/Error"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/edName"
+        app:layout_constraintTop_toBottomOf="@+id/edName" />
+    <!--><-->
+    <TextView
+        android:id="@+id/tvNameError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="7dp"
+        android:text="E-mail must contain @ , .com"
+        android:textColor="@color/Error"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/edName"
+        app:layout_constraintTop_toBottomOf="@+id/edName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

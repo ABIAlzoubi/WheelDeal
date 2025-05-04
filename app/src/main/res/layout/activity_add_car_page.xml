@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    tools:context= ".add_car_page">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="60dp">
+
+            <ImageView
+                android:id="@+id/add_pic_logo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/widget_image_style"
+                android:clickable="true"
+                android:contentDescription="@string/IMG_AddPic"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:elevation="10dp"
+                android:src="@drawable/add_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/etcar_brand"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:importantForAutofill="no"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:inputType="text"
+                android:background="@drawable/post_layout_style"
+                android:elevation="10dp"
+                android:hint="@string/ET_Brand"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_pic_logo" />
+
+
+            <EditText
+                android:id="@+id/etcar_type"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:importantForAutofill="no"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginTop="92dp"
+                android:background="@drawable/post_layout_style"
+                android:elevation="10dp"
+                android:inputType="text"
+                android:hint="@string/ET_Type"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etcar_brand" />
+
+            <NumberPicker
+                android:id="@+id/npcar_model"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginTop="8dp"
+                android:elevation="10dp"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:solidColor="@color/Background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvcar_model"
+                app:layout_constraintTop_toBottomOf="@+id/etcar_type" />
+
+            <TextView
+                android:id="@+id/tvcar_model"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/post_layout_style"
+                android:elevation="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/ET_Model"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/npcar_model"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etcar_type" />
+
+
+            <EditText
+                android:id="@+id/etcontact_number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/post_layout_style"
+                android:elevation="10dp"
+                android:importantForAutofill="no"
+                android:hint="@string/ET_Phone"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvcar_model" />
+
+
+            <EditText
+                android:id="@+id/etstartin_Price"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/post_layout_style"
+                android:elevation="10dp"
+                android:importantForAutofill="no"
+                android:hint="@string/ET_Price"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etcontact_number" />
+
+            <TextView
+                android:id="@+id/tvAuction_time"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/post_layout_style"
+                android:elevation="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/tv_AuctionTime"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/btnAuction_time"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etstartin_Price" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAuction_time"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/button_style"
+                android:elevation="10dp"
+                android:text="@string/SP_Time"
+                android:textColor="@color/Background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvAuction_time"
+                app:layout_constraintTop_toBottomOf="@+id/etstartin_Price" />
+
+
+            <Spinner
+                android:id="@+id/spcities"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/post_layout_style"
+                android:elevation="10dp"
+                android:entries="@array/city"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAuction_time" />
+
+
+            <EditText
+                android:id="@+id/tvNotes"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/post_layout_style"
+                android:elevation="10dp"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:hint="@string/ET_Notes"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spcities" />
+
+            <EditText
+                android:id="@+id/etCar_Number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/post_layout_style"
+                android:elevation="10dp"
+                android:hint="@string/ET_CarNumber"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:maxLength="8"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNotes" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnsave_car_data"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/button_style"
+                android:elevation="10dp"
+                android:text="@string/BTN_Save"
+                android:textColor="@color/Background"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCar_Number" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <nl.joery.animatedbottombar.AnimatedBottomBar
+        android:id="@+id/animatedBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/Background"
+        app:abb_iconSize="35dp"
+        app:abb_indicatorAppearance="round"
+        app:abb_indicatorColor="@color/PrimaryColor"
+        app:abb_indicatorHeight="4dp"
+        app:abb_indicatorMargin="16dp"
+        app:abb_selectedIndex="0"
+        app:abb_selectedTabType="text"
+        app:abb_tabColor="@color/PrimaryColor"
+        app:abb_tabColorSelected="@color/PrimaryColor"
+        app:abb_tabs="@menu/navbar_tabs"
+        app:abb_textSize="15dp"
+        app:abb_tabAnimation="slide"
+        app:abb_animationDuration="18"
+        app:abb_indicatorAnimation="fade"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
